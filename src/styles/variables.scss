@@ -1,0 +1,67 @@
+/**dark theme */
+$dark_bg: #11293c;
+$dark_commonfont:#f4f4f4;
+/**light theme */
+
+// base color
+$blue: #324157;
+$light-blue: #3a71a8;
+$red: #c03639;
+$pink: #e65d6e;
+$green: #30b08f;
+$tiffany: #4ab7bd;
+$yellow: #fec171;
+$panGreen: #30b08f;
+
+//font color
+$keyfont: #303133;
+$commonfont: #606266;
+$subfont: #909399;
+$lightfont: #c0c4cc;
+$bluefont: #34526a; // #5681a2 #026d86
+
+//border color
+$mainborder: #dcdfe6;
+$sommonborder: #e4e7ed;
+$subborder: #ebeef5;
+$lightborder: #f2f6fc;
+
+//status-color
+$status-yellow: #f8c203;
+$status-red: #ee6869;
+$status-blue: #309ffb;
+$status-green: #31d193;
+$status-blue-tag: #4b7698;
+$status-red-tag: #ff5050;
+$status-yellow-tag: #f8cf2b;
+$status-green-tag: #16a55c;
+
+//main color
+$primary: #82adff; //#00a8b0;
+$bg: #fff !default;
+$row-hover: #dde8eb;
+//sidebar
+$menuText: #bfcbd9;
+$menuActiveText: $primary;
+$subMenuActiveText: #f4f4f5; //https://github.com/ElemeFE/element/issues/12951
+
+$menuBg: #11293c;
+$menuHover: #2a486b;
+
+$subMenuBg: #1d344f; //#1f2d3d;//#11333c
+$subMenuHover: #2a486b;
+
+$sideBarWidth: 210px;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}

@@ -1,0 +1,17 @@
+@import 'vxe-table/styles/variable.scss';
+
+// 局部修改变量
+$vxe-primary-color: #425c8f;
+//row
+$vxe-table-row-current-background-color: #e8edf7;
+$vxe-table-row-hover-current-background-color: #e0e7f3;
+
+$vxe-table-row-hover-background-color: #f0f3f9;
+$vxe-table-row-hover-striped-background-color: #f0f3f9;
+//column
+$vxe-table-column-current-background-color: #e8edf7;
+$vxe-table-column-checked-background-color: #e8edf7;
+$vxe-table-column-hover-background-color: #f0f3f9;
+// ...
+
+@import 'vxe-table/styles/modules.scss';

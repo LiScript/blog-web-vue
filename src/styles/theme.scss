@@ -1,0 +1,234 @@
+//该项目只添加了一种自定义主题，可扩展
+body {
+  background: #f3f5f7;
+}
+
+// .el-menu[role="menubar"] {
+//   background: transparent !important;
+// }
+.el-menu-item,
+.el-submenu__title {
+  height: 50px !important;
+  line-height: 50px !important;
+}
+//active:#23616f
+//bg:#28545f
+@mixin left-bar(
+  // 默认导航栏文字颜色
+    $def-color,
+  // 选中导航栏文字颜色
+    $act-color,
+  // 选中导航栏文字背景
+    $act-bg,
+  // LOGO背景色
+    $logo-bg,
+  // LOGO英文字体颜色
+    $logo-en-color,
+  // LOGO中文字体颜色
+    $logo-color: $act-color,
+  // 导航栏背景颜色
+    $bg-color: transparent,
+  // 导航栏背景图片
+    $bg-img: transparent,
+  // 导航栏缩小后悬浮菜单背景图片
+    $menu-narrow-bg: transparent,
+  // 导航选中文字颜色
+    $nav-act-color: $act-color
+) {
+  #nprogress .bar,
+  .car-ball-box .inner {
+    background: $act-color;
+  }
+
+  .act-color {
+    color: $act-color;
+  }
+
+  .act-bg {
+    background: $act-color;
+  }
+
+  .act-border {
+    border-color: $act-color;
+  }
+
+  .el-select__caret,
+  *:not(.is-disabled) {
+    > .el-icon-arrow-up,
+    > .el-icon-arrow-down {
+      color: $act-color;
+    }
+  }
+
+  #app {
+    .el-backtop {
+      color: $act-color;
+      width: 20px;
+      border-radius: 8px;
+      right: 12px !important;
+    }
+
+    // .el-input.is-focus .el-input__inner,
+    // .el-table tr.current-row td {
+    //   border-color: $act-color;
+    // }
+
+    // .el-radio-button__orig-radio:disabled:checked + .el-radio-button__inner {
+    //   background-color: $act-color;
+    //   color: #fff;
+    // }
+
+    // .el-checkbox-button.is-checked .el-checkbox-button__inner {
+    //   background: $act-color;
+    //   color: #fff;
+    // }
+
+    .theme-select li.actived {
+      img {
+        border: 3px solid $act-color;
+      }
+
+      span {
+        color: $act-color;
+      }
+    }
+
+    // .tags-view-container .tags-view-wrapper .tags-view-item.active {
+    //   color: $act-color;
+    //   background: #f3f5f7;
+
+    //   &::before {
+    //     background: $act-color;
+    //   }
+    // }
+
+    .sidebar-container {
+      background: $bg-color $bg-img;
+
+      .logo {
+        > a {
+          > div {
+            &:first-child {
+              background: $logo-bg;
+            }
+
+            &:last-child {
+              > p {
+                &:first-child {
+                  color: $logo-color;
+                }
+
+                &:last-child {
+                  color: $logo-en-color;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .el-menu {
+        z-index: 1002;
+        background-color: transparent !important;
+      }
+
+      .is-active {
+        &[tabindex="-1"] {
+          background-color: $act-bg;
+          border-left: 3px solid $act-color;
+        }
+
+        > .el-submenu__title {
+          color: $nav-act-color;
+        }
+      }
+    }
+
+    @content;
+
+    // .student-info-box::before {
+    //   background: $act-color;
+    // }
+
+    // .class-info-box::before {
+    //   background: $act-color;
+    // }
+
+    // .sidebar-container .el-submenu .el-menu-item,
+    // .el-submenu__title {
+    //   color: $def-color !important;
+    //   background-color: transparent !important;
+
+    //   &.is-active {
+    //     color: $nav-act-color;
+    //     background-color: $act-bg;
+    //   }
+    // }
+  }
+
+  // .el-submenu__title i {
+  //   color: $def-color !important;
+  // }
+
+  // .dashboard-income {
+  //   .num {
+  //     color: $act-color;
+  //   }
+  // }
+
+  // .el-menu--vertical .el-menu {
+  //   background: $menu-narrow-bg;
+  //   background-color: $bg-color !important;
+  // }
+
+  .el-menu-item,
+  .el-submenu__title {
+    color: $def-color !important;
+    background-color: transparent !important;
+
+    &.is-active {
+      color: $act-color;
+      background-color: $act-bg;
+    }
+  }
+
+  .is-active {
+    > .el-submenu__title {
+      color: $act-color;
+    }
+  }
+
+  .el-tooltip__popper {
+    &.is-dark {
+      background: $act-color;
+    }
+
+    &[x-placement^="top"] .popper__arrow {
+      &,
+      &:after {
+        border-top-color: $act-color;
+      }
+    }
+
+    &[x-placement^="right"] .popper__arrow {
+      &,
+      &:after {
+        border-right-color: $act-color;
+      }
+    }
+  }
+}
+
+@mixin top-bar($nav-act-color, $nav-def-color:#606266) {
+  .el-breadcrumb__separator,
+  .el-breadcrumb__inner a,
+  .el-breadcrumb__inner.is-link {
+    font-weight: 100;
+    color: $nav-def-color !important;
+    font-weight: initial;
+  }
+
+  .no-redirect {
+    color: $nav-act-color;
+  }
+}

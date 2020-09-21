@@ -1,0 +1,82 @@
+
+
+.table_container {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  .header-container {
+    background: $bg;
+    padding: 10px 10px 0 10px;
+
+    .search-panel {
+      .el-form-item {
+        margin-bottom: 10px;
+      }
+
+      .el-form-item__content {
+        line-height: 27px;
+      }
+      // 通用宽度，若需个别调整请单独加style
+      .el-input{
+        width:160px;
+      }
+    }
+
+    .el-button {
+      margin-bottom: 10px;
+    }
+
+    .el-button+.el-button {
+      margin-left: 5px;
+    }
+    .el-radio-group{
+      margin-bottom:10px;
+    }
+    //append button受上边样式牵连
+    .el-input-group__append {
+      .el-button {
+        margin-bottom: -10px;
+      }
+    }
+
+  }
+
+  .table-container {
+    flex: 1 1 80px;
+    border-top: 2px solid #ccc;
+    padding: 10px;
+    background: $bg;
+    margin-top: 10px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    .table {
+      flex: 1 1 80px;
+      overflow: auto;
+
+      .device-img {
+        width: 80px;
+        height: 80px;
+
+        .img {
+          width: 100%;
+          filter: invert(0.75);
+        }
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+
+        .label-float-right {
+          text-align: right;
+          width: 62px;
+        }
+      }
+   
+    }
+  }
+}
